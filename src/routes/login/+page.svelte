@@ -1,7 +1,5 @@
 <script>
-	import Google from '../../components/Google.button.svelte';
-	import Github from '../../components/Github.button.svelte';
-	import Divider from '../../components/Divider.svelte';
+	import {Github, Google, Divider} from '../../components/ui'
 </script>
 
 <section class="container mx-auto px-4 pb-8 pt-16">
