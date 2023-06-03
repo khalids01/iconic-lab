@@ -1,5 +1,5 @@
 <script>
-	import {Github, Google, Divider} from '../../components/ui'
+	import {Github, Google, Divider} from '$lib/components/ui'
 </script>
 
 <section class="container mx-auto px-4 pb-8 pt-16">

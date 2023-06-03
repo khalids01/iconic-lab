@@ -1,7 +1,7 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import { Drawer, drawerStore } from '@skeletonlabs/skeleton';
-	import { Divider } from '../ui';
+	import { Divider, Container } from '$lib/components/ui';
 
 	const drawerSettings = {
 		id: 'example-3',
@@ -16,36 +16,36 @@
 </script>
 
 <header class="bg-slate-50/5 shadow-sm backdrop-blur-sm">
-	<nav
-		class="container hidden md:flex max-w-7xl mx-auto w-full justify-between px-4 py-3 gap-4"
-	>
-		<div class="flex gap-6 links">
-			<a href="/" class="text-xl !xl:text-3xl logo font-bold "> iconic lab </a>
-			<a href="/generate">
-				<span> Generate </span>
-				<Icon icon="ri:ai-generate" />
+	<Container>
+		<nav class="hidden md:flex max-w-7xl mx-auto w-full justify-between py-3 lg:py-4 gap-4">
+			<div class="flex gap-6 links">
+				<a href="/" class="text-xl lg:text-3xl logo font-bold"> iconic lab </a>
+				<a href="/generate">
+					<span> Generate </span>
+					<Icon icon="ri:ai-generate" />
+				</a>
+				<a href="/explore">
+					<span> Explore </span>
+					<Icon icon="material-symbols:explore-outline-rounded" />
+				</a>
+			</div>
+			<a class="link variant-ghost-surface" href="/login">
+				<span> Login </span>
+				<Icon icon="solar:login-2-line-duotone" />
 			</a>
-			<a href="/explore">
-				<span> Explore </span>
-				<Icon icon="material-symbols:explore-outline-rounded" />
-			</a>
-		</div>
-		<a class="link variant-ghost-surface" href="/login">
-			<span> Login </span>
-			<Icon icon="solar:login-2-line-duotone" />
-		</a>
-	</nav>
+		</nav>
 
-	<nav class="flex md:hidden justify-between px-3 py-4">
-		<button class="btn pl-0 text-xl" on:click={() => drawerStore.open(drawerSettings)}>
-			<Icon icon="pepicons-pencil:menu" />
-		</button>
-		<a href="/" class="text-xl logo font-bold pt-1 mx-auto pl-8"> iconic lab </a>
-		<a class="link" href="/login">
-			<span class="text-sm"> Login </span>
-			<Icon icon="solar:login-2-line-duotone" />
-		</a>
-	</nav>
+		<nav class="flex md:hidden justify-between px-3 py-4">
+			<button class="btn pl-0 text-xl" on:click={() => drawerStore.open(drawerSettings)}>
+				<Icon icon="pepicons-pencil:menu" />
+			</button>
+			<a href="/" class="text-xl logo font-bold pt-1 mx-auto pl-8"> iconic lab </a>
+			<a class="link" href="/login">
+				<span class="text-sm"> Login </span>
+				<Icon icon="solar:login-2-line-duotone" />
+			</a>
+		</nav>
+	</Container>
 </header>
 
 <Drawer>
@@ -69,14 +69,12 @@
 			</div>
 		</div>
 
-		<div class='flex flex-col items-stretch'>
-			<Divider py={'py-6'} px='px-2' />
+		<div class="flex flex-col items-stretch">
+			<Divider py={'py-6'} px="px-2" />
 			<button class="drawer-btn">
-				<span>
-					Logout
-				</span>
+				<span> Logout </span>
 
-				<Icon icon='solar:logout-2-line-duotone' class='text-lg'/>
+				<Icon icon="solar:logout-2-line-duotone" class="text-lg" />
 			</button>
 		</div>
 	</nav>
@@ -89,7 +87,8 @@
 		border: none !important;
 	}
 
-	.drawer-items a, .drawer-btn {
+	.drawer-items a,
+	.drawer-btn {
 		@apply flex gap-4 items-center bg-slate-600/20 text-slate-100/80 font-medium text-sm rounded-full px-6 py-3 transition-all hover:scale-[1.04] justify-between sm:py-4;
 	}
 
@@ -101,7 +100,6 @@
 			rgba(154, 88, 240, 1) 95%,
 			rgba(154, 88, 240, 1) 110%
 		);
-		/* background: linear-gradient(90deg, #9A58F0B6 0%, #3862E9C4 45%, #39A2CCDC 95%, #39A2CCDC 110%); */
 		color: #292929;
 		background-clip: text;
 		-webkit-background-clip: text;

@@ -1,4 +1,4 @@
-<svg height="30" stroke="#15D6D6" stroke-width="2" class="text-line" width="100%"
+<svg height="65" stroke="#15D6D6" stroke-width="2" class="text-line" width="100%"
 	><text x="50%" dominant-baseline="middle" text-anchor="middle" y="50%">Iconic Lab</text></svg
 >
 
@@ -6,13 +6,14 @@
 	.text-line {
 		stroke-dasharray: 500;
 		stroke-dashoffset: 500;
-		animation: dash 5s linear forwards, filling 5s ease-in forwards;
-		font-size: 30px;
+		/* animation: dash 5s linear forwards, filling 5s ease-in forwards; */
+		animation: dash 10s linear forwards;
+		font-size: 60px;
 	}
 
 	.text-line text {
 		font-family: Helvetica, Arial, sans-serif;
-		font-weight: normal;
+		font-weight: bold;
 		font-style: normal;
 	}
 

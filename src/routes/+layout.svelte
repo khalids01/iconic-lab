@@ -3,7 +3,7 @@
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
-	import { Header } from '../components';
+	import { Header } from '$lib/components';
 </script>
 
 <main class="relative h-full">

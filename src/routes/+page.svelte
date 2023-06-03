@@ -1,9 +1,12 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script>
+	import Logo1 from '$lib/components/header/Logo1.svelte';
+	import heroImg from '$lib/assets/images/hero-image-logos.jpg';
+	import { Container, Flex } from '$lib/components/ui';
+</script>
 
-<div class="container relative h-full mx-auto flex justify-center items-center">
-
-
-	<div class="z-10">
-		<h1>hello</h1>
-	</div>
-</div>
+<Container size="xl" py='pt-4'>
+	<Flex wrap='wrap'>
+		<Logo1 />
+		<img height={300} width={300} src={heroImg} />
+	</Flex>
+</Container>
