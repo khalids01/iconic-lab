@@ -5,9 +5,11 @@
 	export let dir = 'row';
 	export let h = 'max-content';
 	export let w = 'max-content';
+	export let cls = 'flex-element ';
 </script>
 
 <div
+	class={cls}
 	style={`
 --justify: ${justify};
 --align: ${align};

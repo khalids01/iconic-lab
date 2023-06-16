@@ -7,6 +7,6 @@
 <Container size="xl" py='pt-4'>
 	<Flex wrap='wrap'>
 		<Logo1 />
-		<img height={300} width={300} src={heroImg} />
+		<img height={300} width={300} alt='Icons' src={heroImg} />
 	</Flex>
 </Container>

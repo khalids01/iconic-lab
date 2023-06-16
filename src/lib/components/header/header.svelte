@@ -35,12 +35,12 @@
 			</a>
 		</nav>
 
-		<nav class="flex md:hidden justify-between px-3 py-4">
+		<nav class="flex md:hidden justify-between md:px-3 py-4">
 			<button class="btn pl-0 text-xl" on:click={() => drawerStore.open(drawerSettings)}>
 				<Icon icon="pepicons-pencil:menu" />
 			</button>
 			<a href="/" class="text-xl logo font-bold pt-1 mx-auto pl-8"> iconic lab </a>
-			<a class="link" href="/login">
+			<a class="link !pr-1" href="/login">
 				<span class="text-sm"> Login </span>
 				<Icon icon="solar:login-2-line-duotone" />
 			</a>
